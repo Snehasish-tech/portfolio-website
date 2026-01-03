@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snehasish Dey - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Top Banner -->
-    <div class="top-banner">
-        <span>👋 Welcome to Snehasish's Portfolio!</span>
-    </div>
-
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- Navigation -->
-    <nav class="main-nav" id="mainNav">
+    <nav id="navbar">
         <div class="nav-container">
+            <div class="nav-logo" onclick="scrollToSection('home')">
+                <div class="nav-logo-icon">SD</div>
+                
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a onclick="scrollToSection('home')">Home</a></li>
+                <li><a onclick="scrollToSection('about')">About</a></li>
+                <li><a onclick="scrollToSection('experience')">Experience</a></li>
+                <li><a onclick="scrollToSection('projects')">Projects</a></li>
+                <li><a onclick="scrollToSection('skills')">Skills</a></li>
+                <li><a onclick="scrollToSection('education')">Education</a></li>
+                <li><a onclick="scrollToSection('certificates')">Certificates</a></li>
+                <li><a onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -27,363 +36,438 @@
         </div>
     </nav>
 
-    <!-- Animated Typing -->
-    <div class="animated-typing" id="animatedTyping"></div>
-
-    <!-- Floating Shapes -->
-    <div class="floating-shapes">
-        <div class="shape" style="width: 100px; height: 100px; background: linear-gradient(45deg, #4facfe, #00f2fe); border-radius: 50%;"></div>
-        <div class="shape" style="width: 80px; height: 80px; background: linear-gradient(45deg, #667eea, #9066ba); border-radius: 20px;"></div>
-        <div class="shape" style="width: 60px; height: 60px; background: linear-gradient(45deg, #f093fb, #f5576c); border-radius: 50%;"></div>
-        <div class="shape" style="width: 120px; height: 120px; background: linear-gradient(45deg, #a8edea, #fed6e3); border-radius: 30px;"></div>
-    </div>
-
-    <div class="container">
-        <!-- Profile Section -->
-        <section id="home" class="profile-section">
-            <div class="profile-image">
-                <img src="https://img.imgdd.com/673da2cf-9e0a-426e-97c7-0b6c7b243daa.jpg" alt="Snehasish Dey">
-            </div>
-            <h1 id="main-heading">Hi, I'm Snehasish Dey</h1>
-            <p class="subtitle">Aspiring IT Professional | Tech Learner | Passionate about Web & Technology</p>
-            
-            <div class="cta-buttons">
-                <button class="download-btn" onclick="downloadResume()">📄 Download Resume</button>
-                <a href="#contact" class="contact-btn">💬 Let's Connect</a>
-            </div>
-        </section>
-
-        <!-- Content Grid -->
-        <div class="content-grid">
-            <!-- About Section -->
-            <section id="about" class="section">
-                <h2>🚀 About Me</h2>
-                <p class="about-text">
-                  Hi! I'm Snehasish Dey, a passionate Full Stack Web Developer and a Computer Science undergraduate currently pursuing my B.Tech in Information Technology.
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">👋 Welcome to my portfolio</p>
+                <h1>Hi, I'm <span class="gradient-text">Snehasish Dey</span></h1>
+                <p class="hero-description">
+                    Frontend Web Developer & Tech Enthusiast. I build modern, responsive web applications with a passion for clean code and user experience.
                 </p>
-                <p class="about-text">
-                 I specialize in building responsive, user-friendly web applications using technologies like HTML, CSS, JavaScript, and React on the front-end, and Node.js, Express, and MongoDB on the back-end. I love turning ideas into real, working products that solve problems and make life easier.
-                </p>
-                <p class ="about-text">
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')">
+                        View My Work →
+                    </button>
+                    <button class="btn btn-secondary" onclick="downloadResume()">
+                        📄 Download Resume
+                    </button>
                     
-                  Always eager to learn and experiment, I enjoy working on personal projects, exploring open-source contributions, and staying updated with the latest trends in web development. I believe in writing clean, maintainable code and collaborating with others to build impactful solutions.
-                </p>
-                <p class ="about-text">
-                   
-Looking forward to growing as a developer and contributing to exciting projects in the tech world.
-                </p>
+                </div>
                 
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number">8.41</span>
-                        <div class="stat-label">CGPA (1ST YEAR)</div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="images/Snehasish.jpeg" alt="Snehasish Dey">
+                </div>
+                <div class="hero-badge">Available for work</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>🚀 About Me</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <p>Hi! I'm Snehasish Dey, a passionate Full Stack Web Developer and a Computer Science undergraduate currently pursuing my B.Tech in Information Technology.</p>
+                <p>I specialize in building responsive, user-friendly web applications using technologies like HTML, CSS, JavaScript, and React on the front-end, and Node.js on the back-end. I love turning ideas into real, working products that solve problems and make life easier.</p>
+                <p>Always eager to learn and experiment, I enjoy working on personal projects, exploring open-source contributions, and staying updated with the latest trends in web development. I believe in writing clean, maintainable code and collaborating with others to build impactful solutions.</p>
+                <p>Looking forward to growing as a developer and contributing to exciting projects in the tech world.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="number">8.41</div>
+                    <div class="label">CGPA (1st Year)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">0</div>
+                    <div class="label">Years Learning</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">3+</div>
+                    <div class="label">Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">10+</div>
+                    <div class="label">Technologies</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <h2>💼 Experience</h2>
+        <div class="experience-item">
+            <h3>Student Developer</h3>
+            <div class="experience-company">Self-Learning Journey</div>
+            <div class="experience-date">2024 - Present</div>
+            <div class="experience-description">
+                Actively learning and practicing web development, data structures, and algorithms. Working on personal projects to build practical experience and enhance programming skills.
+            </div>
+        </div>
+        <div class="experience-item">
+            <h3>Certification Courses</h3>
+            <div class="experience-company">Various Platforms</div>
+            <div class="experience-date">2025 - Present</div>
+            <div class="experience-description">
+                Completed multiple online certifications in Java Programming, GitHub, and AI Tools to supplement academic learning with industry-relevant skills.
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>💻 Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header-bar"></div>
+                <div class="project-card-content">
+                    <h3>Personal Portfolio Website</h3>
+                    <p class="project-description">A modern, responsive portfolio website built with HTML5, CSS3, and JavaScript. Features smooth animations, interactive elements, and a mobile-first design approach.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">2+</span>
-                        <div class="stat-label">Years Learning</div>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">2+</span>
-                        <div class="stat-label">Projects</div>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3+</span>
-                        <div class="stat-label">Technologies</div>
+                    <div class="project-links">
+                        <a href="https://github.com/Snehasish-tech/my-portfolio" target="_blank">💻 GitHub</a>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <!-- Experience Section -->
-            <section id="experience" class="section">
-                <h2>💼 Experience</h2>
-                <div class="experience-timeline">
-                    <div class="experience-item">
-                        <h3>Student Developer</h3>
-                        <div class="experience-company">Self-Learning Journey</div>
-                        <div class="experience-date">2024 - Present</div>
-                        <div class="experience-description">
-                            Actively learning and practicing web development, data structures, and algorithms. Working on personal projects to build practical experience and enhance programming skills.
-                        </div>
+            <div class="project-card">
+                <div class="project-header-bar"></div>
+                <div class="project-card-content">
+                    <h3>Marku: SGPA & CGPA Calculator</h3>
+                    <p class="project-description">A simple, responsive web app for students to calculate SGPA, CGPA, and percentage using credit-based inputs. No backend needed.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
                     </div>
-                   
-                    <div class="experience-item">
-                        <h3>Certification Courses</h3>
-                        <div class="experience-company">Various Platforms</div>
-                        <div class="experience-date">2025 - Present</div>
-                        <div class="experience-description">
-                            Completed multiple online certifications in Java Programming, GitHub, and AI Tools to supplement academic learning with industry-relevant skills.
-                        </div>
+                    <div class="project-links">
+                        <a href="https://marku.netlify.app/" target="_blank">🔗 Live</a>
+                        <a href="https://github.com/Snehasish-tech/Marku-gpa-calculator" target="_blank">💻 GitHub</a>
                     </div>
                 </div>
-            </section>
-
-           
-           <!-- Projects Section -->
-<section id="projects" class="section">
-    <h2>💻 Projects</h2>
-    <div class="projects-grid">
-
-        <!-- Project 1: Portfolio Website -->
-        <div class="project-card">
-            <div class="project-header">
-                <h3>Personal Portfolio Website</h3>
-                <span class="project-status">Completed</span>
             </div>
-            <p>A modern, responsive portfolio website built with HTML5, CSS3, and JavaScript. Features smooth animations, interactive elements, and a mobile-first design approach.</p>
-            <div class="project-tech">
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Responsive Design</span>
+
+            <div class="project-card">
+                <div class="project-header-bar"></div>
+                <div class="project-card-content">
+                    <h3>ChhatroBondhu - Study Companion</h3>
+                    <p class="project-description">Smart academic assistant for students – notes search, GPT-based GPA calculator, and 3D visual enhancements.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://chhatro-bondhu.netlify.app/" target="_blank">🔗 Live</a>
+                        <a href="https://github.com/Snehasish-tech/ChhatroBondhu" target="_blank">💻 GitHub</a>
+                    </div>
+                </div>
             </div>
-            <div class="project-links">
+             <div class="project-card">
+                <div class="project-header-bar"></div>
+                <div class="project-card-content">
+                    <h3>KrishiGrowAI</h3>
+                    <p class="project-description">AI-powered crop recommendations, real-time weather insights, market price analysis, smart chatbot support, community collaboration, and financial planning tools.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">MYSql</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="" target="_blank">🔗 Live</a>
+                        <a href="https://github.com/Snehasish-tech/KrishiGrowAI" target="_blank">💻 GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>🛠️ Skills & Expertise</h2>
+
+        <!-- Frontend Skills -->
+        <div class="skill-category">
+            <h3 class="category-title">💻 Frontend Development</h3>
+            <div class="skills-grid">
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-icon">🌐</div>
+                    <div class="skill-name">HTML5</div>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 95%"></div>
+                        </div>
+                        <span class="level-text"> Advanced</span>
+                    </div>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-icon">🎨</div>
+                    <div class="skill-name">CSS3</div>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="level-text">Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-icon">⚡</div>
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="level-text">Intermediate</span>
+                    </div>
+                </div>
                
-                <a href="https://github.com/Snehasish-tech/my-portfolio" target="_blank" class="project-btn">💻 GitHub</a>
-            </div>
-        </div>
-
-        <!-- Project 2: Marku CGPA Calculator -->
-        <div class="project-card">
-            <div class="project-header">
-                <h3>Marku: SGPA & CGPA Calculator</h3>
-                <span class="project-status">Completed</span>
-            </div>
-            <p>A simple, responsive web app for students to calculate SGPA, CGPA, and percentage using credit-based inputs. Built with HTML, CSS, and JavaScript. No login or backend needed — everything works instantly in the browser.</p>
-            <div class="project-tech">
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-                <span class="tech-tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-                <a href="https://marku.netlify.app/" target="_blank" class="project-btn">🔗 View Live</a>
-                <a href="https://github.com/Snehasish-tech/Marku-gpa-calculator" target="_blank" class="project-btn">💻 GitHub</a>
-            </div>
-        </div>
-
-         <div class="project-card">
-            <div class="project-header">
-                <h3>🎓 ChhatroBondhu - Your Ultimate Study Companion</h3>
-                <span class="project-status">Completed</span>
-            </div>
-            <p>Smart academic assistant for students – notes search, GPT-based GPA calculator, and 3D visual enhancements.</p>
-            <div class="project-tech">
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-                <span class="tech-tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-                <a href="https://chhatro-bondhu.netlify.app/" target="_blank" class="project-btn">🔗 View Live</a>
-                <a href="https://github.com/Snehasish-tech/ChhatroBondhu" target="_blank" class="project-btn">💻 GitHub</a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-            <!-- Skills Section -->
-            <section id="skills" class="section">
-                <h2>🛠️ Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-tag">☕ Java</div>
-                    <div class="skill-tag">🌐 HTML5</div>
-                    <div class="skill-tag">🎨 CSS3</div>
-                    <div class="skill-tag">⚡ JavaScript</div>
-                    <div class="skill-tag">🔧 C Programming</div>
-                    <div class="skill-tag">📱 Git & GitHub</div>
-                    <div class="skill-tag">🧮 Data Structures</div>
-                    <div class="skill-tag">🔍 Algorithms</div>
-                    <div class="skill-tag">💻 VS Code</div>
-                    <div class="skill-tag">🔄 Version Control</div>
-                    
-                    <div class="skill-tag">🤖 AI Tools</div>
-                </div>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education" class="section">
-                <h2>🎓 Education</h2>
-                <div class="education-item">
-                    <h3>Bachelor of Technology - Information Technology</h3>
-                    <div class="education-institution">Narula Institute of Technology</div>
-                    <p><strong>Current CGPA:</strong> 8.41 (1st Year)</p>
-                    <p><strong>Status:</strong> Currently in 2nd Year</p>
-                    <p><strong>Expected Graduation:</strong> 2028</p>
-                </div>
                 
-                <div class="education-item">
-                    <h3>Higher Secondary Education (Class 12)</h3>
-                    <div class="education-institution">Digha Vidyabhawan</div>
-                    <p><strong>Percentage:</strong> 80.2%</p>
-                    <p><strong>Stream:</strong> Science</p>
-                    <p><strong>Year:</strong> 2024</p>
-                </div>
-                
-                <div class="education-item">
-                    <h3>Secondary Education (Class 10)</h3>
-                    <div class="education-institution">Digha Vidyabhawan</div>
-                    <p><strong>Percentage:</strong> 90.85%</p>
-                    <p><strong>Year:</strong> 2022</p>
-                </div>
-            </section>
-
-            <!-- Goals Section -->
-            <section id="goals" class="section">
-                <h2>🎯 Goals & Achievements</h2>
-                <div class="goals-grid">
-                    <div class="goal-item">
-                        <div class="goal-icon">🎓</div>
-                        <h4>Academic Excellence</h4>
-                        <p>Maintaining 8.41 CGPA in B.Tech IT program while actively participating in coding competitions and technical workshops.</p>
-                    </div>
-                    <div class="goal-item">
-                        <div class="goal-icon">💻</div>
-                        <h4>Full-Stack Developer</h4>
-                        <p>Aiming to become proficient in modern web technologies including React, Node.js, and database management systems.</p>
-                    </div>
-                    <div class="goal-item">
-                        <div class="goal-icon">🚀</div>
-                        <h4>Innovation & Impact</h4>
-                        <p>Building projects that solve real-world problems and contribute to open-source communities.</p>
-                    </div>
-                  
-            </section>
-
-            <!-- Certificates Section -->
-            <section id="certificates" class="section">
-                <h2>🏅 Certificates & Achievements</h2>
-                <div class="certificates-grid">
-                    <div class="certificate-card">
-                        <h4>Java Programming Fundamentals</h4>
-                        <div class="issuer">Issued by: Crio.Do</div>
-                        <div class="date">Date: June 2025</div>
-                        <a href="https://ibb.co/GQXqskzX" target="_blank">🔗 View Certificate</a>
-                    </div>
-                    
-                    <div class="certificate-card">
-                        <h4>GitHub Basics & Version Control</h4>
-                        <div class="issuer">Issued by: SimpliLearn</div>
-                        <div class="date">Date: June 2025</div>
-                        <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI1MjU0IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODY5NTY1M185MDMwMTE1MTc1MzYzNTUxMDUzMC5wbmciLCJ1c2VybmFtZSI6IlNORUhBU0lTSCBERVkgIn0&utm_source=shared-certificate&utm_medium=app_lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Fcertificates.simplicdn.net%2Fshare%2F8695653_90301151753635510530.png&_branch_match_id=1479074182589502528&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1i8wd%2FWP8Ez2zAlLsq8rSk1LLSrKzEuPTyrKLy9OLbL1AapJTfHMAwBK32l3PwAAAA%3D%3D" target="_blank">🔗 View Certificate</a>
-                    </div>
-                    
-                    <div class="certificate-card">
-                        <h4>AI Tools Workshop</h4>
-                        <div class="issuer">Issued by: Be10X</div>
-                        <div class="date">Date: July 2025</div>
-                        <a href="https://certx.in/certificate/0270772f-3809-4400-b29b-1e1c61cd0997541050" target="_blank">🔗 View Certificate</a>
-                    </div>
-                    <div class="certificate-card">
-                        <h4>
-                        Deloitte Australia - Data Analytics Job Simulation</h4>
-                        <div class="issuer">Issued by: Forage</div>
-                        <div class="date">Date: July 2025</div>
-                        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_piYBso7mjFvCrogiC_1751652633235_completion_certificate.pdf" target="_blank">🔗 View Certificate</a>
-                    </div>
-                    
-                  
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="section">
-                <h2>📞 Get In Touch</h2>
-                <div class="contact-info">
-                    <div class="contact-item" onclick="copyToClipboard('7908242467')">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>+91 7908242467</p>
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-icon">🎨</div>
+                    <div class="skill-name">Tailwind CSS</div>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 80%"></div>
                         </div>
-                    </div>
-                    
-                    <div class="contact-item" onclick="copyToClipboard('snehasishdey02@gmail.com')">
-                        <div class="contact-icon">✉️</div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>snehasishdey02@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Kolkata, West Bengal, India</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">🎓</div>
-                        <div class="contact-details">
-                            <h4>Institution</h4>
-                            <p>Narula Institute of Technology</p>
-                        </div>
+                        <span class="level-text">Beginner</span>
                     </div>
                 </div>
-                
-                <!-- Social Links -->
-                  <section class="follow-section">
-    <h2>   <h3>Follow Me</h3></h2>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/snehasish-dey-821b7732a/" class="social-link" title="LinkedIn">💼</a>
-                     
-                    <a href="https://github.com/Snehasish-tech?tab=repositories" class="social-link" title="GitHub">💻</a>
-                   
-                   
-                    <a href="mailto:snehasishdey02@gmail.com" class="social-link" title="Email">✉️</a>
-                </div>
-            </section>
+            </div>
         </div>
-    </div>
 
     
+        <!-- Programming Languages -->
+        <div class="skill-category">
+            <h3 class="category-title">💾 Programming Languages</h3>
+            <div class="skills-grid">
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-icon">☕</div>
+                    <div class="skill-name">Java</div>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 80%"></div>
+                        </div>
+                        <span class="level-text">Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-icon">🔤</div>
+                    <div class="skill-name">C Programming</div>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 70%"></div>
+                        </div>
+                        <span class="level-text">Intermediate</span>
+                    </div>
+                </div>
+               
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-icon">📱</div>
+                    <div class="skill-name">Python</div>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 60%"></div>
+                        </div>
+                        <span class="level-text">Beginner</span>
+                    </div>
+                </div>
+               
+                
+            </div>
+        </div>
+
+        
+
+        <!-- Tools & Technologies -->
+        <div class="skill-category">
+            <h3 class="category-title">🛠️ Tools & Technologies</h3>
+            <div class="skills-grid">
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-icon">📱</div>
+                    <div class="skill-name">Git & GitHub</div>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="level-text">Intermediate</span>
+                    </div>
+                </div>
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-icon">💻</div>
+                    <div class="skill-name">VS Code</div>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 95%"></div>
+                        </div>
+                        <span class="level-text">Advanced</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card scroll-reveal">
+                    <div class="skill-icon">🤖</div>
+                    <div class="skill-name">AI Tools & ChatGPT</div>
+                    <div class="skill-level">
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 80%"></div>
+                        </div>
+                        <span class="level-text">Advanced</span>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
+       
+                       
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <h2>🎓 Education</h2>
+        <div class="education-item">
+            <h3>Bachelor of Technology - Information Technology</h3>
+            <div class="education-institution">Narula Institute of Technology</div>
+            <p><strong>Current CGPA:</strong> 8.41 (1st Year)</p>
+            <p><strong>Status:</strong> Currently in 2nd Year</p>
+            <p><strong>Expected Graduation:</strong> 2028</p>
+        </div>
+        
+        <div class="education-item">
+            <h3>Higher Secondary Education (Class 12)</h3>
+            <div class="education-institution">Digha Vidyabhawan</div>
+            <p><strong>Percentage:</strong> 80.2%</p>
+            <p><strong>Stream:</strong> Science</p>
+            <p><strong>Year:</strong> 2024</p>
+        </div>
+        
+        <div class="education-item">
+            <h3>Secondary Education (Class 10)</h3>
+            <div class="education-institution">Digha Vidyabhawan</div>
+            <p><strong>Percentage:</strong> 90.85%</p>
+            <p><strong>Year:</strong> 2022</p>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates" id="certificates">
+        <h2>🏅 Certificates & Achievements</h2>
+        <div class="certificates-grid">
+            <div class="certificate-card">
+                <h4>Java Programming Fundamentals</h4>
+                <div class="issuer">Issued by: Crio.Do</div>
+                <div class="date">Date: June 2025</div>
+                <a href="https://ibb.co/GQXqskzX" target="_blank">🔗 View Certificate</a>
+            </div>
+            
+            <div class="certificate-card">
+                <h4>GitHub Basics & Version Control</h4>
+                <div class="issuer">Issued by: SimpliLearn</div>
+                <div class="date">Date: June 2025</div>
+                <a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI1MjU0IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODY5NTY1M181OTAzMDExNTc1MzYzNTUxMDUzMC5wbmciLCJ1c2VybmFtZSI6IlNORUhBU0lTSCBERVkgIn0&utm_source=shared-certificate" target="_blank">🔗 View Certificate</a>
+            </div>
+            
+            <div class="certificate-card">
+                <h4>AI Tools Workshop</h4>
+                <div class="issuer">Issued by: Be10X</div>
+                <div class="date">Date: July 2025</div>
+                <a href="https://certx.in/certificate/0270772f-3809-4400-b29b-1e1c61cd0997541050" target="_blank">🔗 View Certificate</a>
+            </div>
+
+            <div class="certificate-card">
+                <h4>Deloitte Australia - Data Analytics Job Simulation</h4>
+                <div class="issuer">Issued by: Forage</div>
+                <div class="date">Date: July 2025</div>
+                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_piYBso7mjFvCrogiC_1751652633235_completion_certificate.pdf" target="_blank">🔗 View Certificate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>📞 Get In Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-item" onclick="copyToClipboard('7908242467')">
+                <div class="contact-icon">📱</div>
+                <h4>Phone</h4>
+                <p>+91 7908242467</p>
+            </div>
+            
+            <div class="contact-item" onclick="copyToClipboard('snehasishdey02@gmail.com')">
+                <div class="contact-icon">✉️</div>
+                <h4>Email</h4>
+                <p>snehasishdey02@gmail.com</p>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <h4>Location</h4>
+                <p>Kolkata, West Bengal, India</p>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-icon">🎓</div>
+                <h4>Institution</h4>
+                <p>Narula Institute of Technology</p>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; margin: 3rem 0 2rem;">Follow Me</h3>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/snehasish-dey-821b7732a/" class="social-link" title="LinkedIn">💼</a>
+            <a href="https://github.com/Snehasish-tech?tab=repositories" class="social-link" title="GitHub">💻</a>
+            <a href="mailto:snehasishdey02@gmail.com" class="social-link" title="Email">✉️</a>
+        </div>
+    </section>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <!-- AI Assistant Widget -->
     <div class="ai-assistant">
         <button class="ai-chat-trigger" id="aiChatTrigger" title="Chat with AI Assistant">
             🤖
         </button>
-        
+
         <div class="ai-chat-widget" id="aiChatWidget">
             <div class="ai-chat-header">
                 <div class="ai-avatar">🤖</div>
                 <div class="ai-info">
-                    <h3>Nexa.ai</h3>
+                    <h3>Nexa AI</h3>
                     <p>Ask me about Snehasish!</p>
                 </div>
             </div>
-            
+
             <div class="ai-chat-messages" id="aiChatMessages">
                 <div class="ai-message">
-                    👋 Hi! I'm Nexa.ai, Snehasish's intelligent assistant. I can help you learn more about his projects, skills, education, and experience. What would you like to know?
+                    👋 Hi! I'm Nexa AI, Snehasish's intelligent assistant. I can help you learn more about his projects, skills, education, and experience. What would you like to know?
                 </div>
             </div>
-            
+
             <div class="ai-suggestions">
                 <span class="ai-suggestion" data-question="Tell me about Snehasish's projects">Projects</span>
                 <span class="ai-suggestion" data-question="What are his skills?">Skills</span>
                 <span class="ai-suggestion" data-question="Tell me about his education">Education</span>
                 <span class="ai-suggestion" data-question="How can I contact him?">Contact</span>
             </div>
-            
+
             <div class="ai-chat-input">
-                <input type="text" class="ai-input-field" id="aiInputField" placeholder="Ask me anything about Snehasish...">
+                <input type="text" class="ai-input-field" id="aiInputField" placeholder="Ask me anything...">
                 <button class="ai-send-btn" id="aiSendBtn">➤</button>
             </div>
         </div>
     </div>
 
+    
 </body>
-</html> 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div>
+</html>
